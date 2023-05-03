@@ -14,7 +14,7 @@ public class Series{
     private String year;
     private float rating;
     private String season;
-    private int episodes;
+    private String episode;
     User currentUser;
     TextUI ui = new TextUI();
 
@@ -27,13 +27,13 @@ public class Series{
 
     }
 
-    public Series(int id,String title,String year,String genre,float rating,String season){
+    public Series(int id,String title,String year,String genre,float rating,String episode){
         this.id = id;
         this.title = title;
         this.year = year;
         this.genre = genre;
         this.rating = rating;
-        this.season = season;
+        this.episode = episode;
 
     }
 

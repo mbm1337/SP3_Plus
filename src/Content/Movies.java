@@ -22,10 +22,7 @@ public class Movies {
     DBConnector dbc;
 
     public Movies(){
-
     }
-
-
 
     public Movies(int id, String title, int year, String genre , float rating) {
         this.id = id;
@@ -33,7 +30,6 @@ public class Movies {
         this.year = year;
         this.genre = genre;
         this.rating = rating;
-
     }
 
     public void movieMenu(User user) {

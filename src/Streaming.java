@@ -16,7 +16,6 @@ public class Streaming {
     private User currentUser;
     Movies movies;
     Series series;
-    UserHandler userHandler;
     ArrayList <User> users;
 
     DBConnector dbc;
@@ -32,8 +31,8 @@ public class Streaming {
     public void streamSetup() {
         ui = new TextUI();
         dbc = new DBConnector();
-
         users = dbc.readUserData();
+
 
         String s1 = ui.getUserInput("Already user? Y/N");
         if (s1.equalsIgnoreCase("Y")) {
@@ -79,6 +78,7 @@ public class Streaming {
 
             if (tmpUsername.equalsIgnoreCase(username) && tmpPassword.equals(password)) {
                 currentUser = u;
+                ui.displayMessage("Welcome " + currentUser);
                 mainMenu();
             } else {
                 ui.displayMessage("Sorry, the username or password is incorrect");
@@ -98,6 +98,7 @@ public class Streaming {
                 User user = new User(username,password);
                 users.add(user);
                 currentUser = user;
+                ui.displayMessage("Welcome " + currentUser);
                 mainMenu();
             } else {
                 ui.displayMessage("Sorry, the username is already in use");
