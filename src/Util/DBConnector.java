@@ -10,7 +10,6 @@ package Util;
     public class DBConnector {
 
 
-
         // database URL
         static final String DB_URL = "jdbc:mysql://localhost/streaming";
 
@@ -120,9 +119,6 @@ package Util;
 
                     Series serie = new Series(id,title,year,genre,rating,episodes);
                     series.add(serie);
-
-
-
                 }
 
 
