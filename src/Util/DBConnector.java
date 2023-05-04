@@ -1,11 +1,8 @@
 package Util;
-
     import java.sql.*;
     import java.util.ArrayList;
-
     import Content.Movies;
     import Content.Series;
-    import Util.User;
 
     public class DBConnector {
 
